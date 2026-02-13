@@ -2,7 +2,7 @@ import os
 from pyrogram import Client, filters
 from config import API_ID, API_HASH, BOT_TOKEN, DOWNLOAD_PATH
 
-# Make sure download folder exists
+
 os.makedirs(DOWNLOAD_PATH, exist_ok=True)
 
 app = Client(
@@ -48,12 +48,10 @@ async def link_cmd(client, message):
         # Download video
         path = await msg.download(file_name=DOWNLOAD_PATH)
 
-        # Send back to user
         await app.send_video(chat_id=user_id, video=path, caption="✅ Here is your video!")
 
     except Exception as e:
         await message.reply_text(f"❌ Error: {e}")
 
-# Run bot
 if __name__ == "__main__":
     app.run()
