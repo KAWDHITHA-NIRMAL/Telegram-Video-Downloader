@@ -43,10 +43,10 @@ pip install -r requirements.txt
 ```
 - Create a .env file with your credentials:
 ```ini
-API_ID=your_api_id
-API_HASH=your_api_hash
-BOT_TOKEN=your_bot_token
-TARGET_CHAT_ID=-1001234567890
+API_ID=your_api_id  #https://my.telegram.org
+API_HASH=your_api_hash # https://my.telegram.org
+BOT_TOKEN=your_bot_token #https://t.me/BotFather
+TARGET_CHAT_ID=-1001234567890 #https://t.me/ChatidTelegramBot
 
 ```
 #### 🚀 Usage
